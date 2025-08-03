@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Reminder - Onboarding</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .phone-container {
+            width: 375px;
+            height: 812px;
+            background: #000;
+            border-radius: 40px;
+            padding: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .screen {
+            width: 100%;
+            height: 100%;
+            background: #FFFFFF;
+            border-radius: 32px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .status-bar {
+            height: 44px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .time {
+            color: #000;
+        }
+
+        .battery {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .battery-icon {
+            width: 24px;
+            height: 12px;
+            border: 2px solid #000;
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .battery-level {
+            width: 80%;
+            height: 100%;
+            background: #000;
+            border-radius: 1px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 100%;
+            background: #fff;
+            border: 3px solid #000;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 6px 6px 0 #000;
+            margin-bottom: 40px;
+        }
+
+        .emoji {
+            font-size: 80px;
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            color: #000;
+        }
+
+        .description {
+            font-size: 16px;
+            line-height: 24px;
+            color: #000;
+            font-weight: 500;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #000;
+            opacity: 0.3;
+        }
+
+        .dot.active {
+            opacity: 1;
+            background: #2196F3;
+        }
+
+        .actions {
+            display: flex;
+            gap: 16px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 16px;
+            border: 3px solid #000;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.1s ease;
+        }
+
+        .btn-skip {
+            background: #fff;
+            color: #000;
+            box-shadow: 4px 4px 0 #000;
+        }
+
+        .btn-next {
+            background: #2196F3;
+            color: #fff;
+            box-shadow: 4px 4px 0 #000;
+        }
+
+        .btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0 #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-container">
+        <div class="screen">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="battery">
+                    <span>100%</span>
+                    <div class="battery-icon">
+                        <div class="battery-level"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content">
+                <div class="main-content">
+                    <div class="card">
+                        <span class="emoji">💧</span>
+                        <h1 class="title">Stay Hydrated</h1>
+                        <p class="description">Track your daily water intake with our neubrutalism-style hydration tracker.</p>
+                    </div>
+                    
+                    <div class="pagination">
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+                
+                <div class="actions">
+                    <button class="btn btn-skip">Skip</button>
+                    <button class="btn btn-next">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
